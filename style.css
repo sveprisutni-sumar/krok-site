@@ -121,13 +121,8 @@ main {
 }
 
 main img {
+  flex: 1;
   max-width: 100%;
-}
-
-@media (min-width: 1000px) {
-  main img {
-    flex-direction: column;
-  }
 }
 
 article, section {
@@ -135,38 +130,40 @@ article, section {
 }
 
 aside {
-  flex: 1;
-  margin-left: 10px;
-  padding: 1%;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 1px;
   max-width: 25%;
+  text-align: center;
 }
 
 aside img {
-  max-width: 100%;
+  max-width: 50%;
 }
 
-@media (max-width: 1000px) {
-  aside {
-      flex-direction: column;
-      background-color:#fbff00;    
-  }
+@media (max-width: 70em) {
   .special {
+    font-size: 125%;
+    text-wrap: wrap;
+    text-align: left;
+  }
+  .main-special {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: italic;
-    font-size: smaller;
-    color: rgb(114, 70, 70);
-    object-fit: cover;
+    text-wrap: pretty;
+    font-size: 125%;
   }
 }
 
-/* aside a {
-  display: block;
-  float: left;
-  width: 100%;
-} */
+dd::first-letter {
+  color: rgb(243, 5, 171);
+}
+
+* {
+  margin: 0;
+}
 
 footer {
-  margin-top: 10px;
+  margin-top: 1%;
 }
 
 /* || table layout */
@@ -200,10 +197,12 @@ tr:nth-child(odd) td {
   background-color: rgb(68, 67, 70);
 }
 
-td em {
+td>em {
   font-size: large;
   background-color:rgb(255, 136, 0);
   font-style: italic;
+  text-overflow: clip;
+  font-stretch: extra-condensed;
 }
 
 caption {
@@ -219,6 +218,19 @@ caption {
   background-color: #fbff00;
 }
 
-/* .special {
-  color: brown;
-} */
+a:hover {
+  color: rgb(95, 68, 36);
+  font-stretch: ultra-condensed;
+}
+
+a:focus {
+  color: rgb(206, 131, 41);
+  font-stretch: ultra-expanded;
+}
+
+@scope (.main-pix) {
+  img {
+    border: 5px solid rgb(95, 68, 36);
+  }
+  
+}
