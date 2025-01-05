@@ -15,7 +15,7 @@
 
         <header>
 
-            <h1> <strong>PLANINARENJE</strong> </h1>
+            <h1> <b>PLANINARENJE</b> </h1>
 
             <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u">
                 <img src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
@@ -38,11 +38,13 @@
     
         <main>
 
-            <picture class="main-pix">
-                <source media="(min-width: 1500px)" srcset="desolate-mountain-square-crop.jpg">
-                <source media="(min-width: 850px)" srcset="desolate-mountain-medium-crop.jpg">
-                <source media="(min-width: 650px)" srcset="desolate-mountain-small-crop.jpg">
-                <img src="desolate-mountain-smallest-crop.jpg" alt="AI generated pix of an mountains">
+            <picture class="main-img">
+                <source media="(min-width: 1200px)" srcset="desolate-mountain-square-crop.jpg">
+                <source media="(max-height: 600px)" srcset="desolate-mountain-square-crop.jpg">
+                <source media="(min-width: 981px)" srcset="desolate-mountain-medium-crop.jpg">
+                <source media="(max-height: 600px)" srcset="desolate-mountain-medium-crop.jpg">
+                <source media="(max-width: 849px)" srcset="desolate-mountain-crop-800x200.jpg">
+                <img src="hard-boiled-wide-crop.jpg" alt="AI image wide crop">
             </picture>
                        
             <section>
@@ -70,22 +72,24 @@
             </dl>
             </article>
             </section>
-            <aside class="sidebar">
+            <aside class="main-special">
                 <img src="cipela.jpeg" alt="Ai generated cipela">
                 <p class="main-special">
-                    „Osim blagotvornog delovanja na kardiovaskularni
-                    i respiratorni sistem, pokazalo se da povoljno utiče na endokrini i imuni sistem", kaže dr Nenad Dikić,
+                    <strong>„Osim blagotvornog delovanja na kardiovaskularni
+                    i respiratorni sistem, pokazalo se da povoljno utiče na endokrini i imuni sistem"</strong>, kaže dr Nenad Dikić,
                     predsednik UMSS za BBC na srpskom.
                 </p>
             </aside>
         </main>
 
         <!-- U nastavku je vidžet za vreme. Kod je kopiran sa https://weatherwidget.io/ -->
+
         <a class="weatherwidget-io" href="https://forecast7.com/sr/45d1221d29/vrsac/" data-label_1="Vremenska prognoza za Vršac" data-theme="original" >VRŠAC WEATHER</a>
             <script>
                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
                 fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
             </script>
+
         <!-- Ovde je završen kod za vidžet. Teg <script> po onlajn literaturi služi za ubacivanje JavaScript koda u HTML (ili barem ja tako shvatam). To se radi radi izvršavanja skripti na
             klijentskoj strani. Izvor https://www.geeksforgeeks.org/html-script-tag/-->
 

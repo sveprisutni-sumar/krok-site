@@ -16,7 +16,7 @@
 
     <header>
 
-        <h1> <strong>Dnevnik planinarenja</strong> </h1>
+        <h1> <b>Dnevnik planinarenja</b> </h1>
 
         <img src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
         <!--src tu se nalazi relativni i apsolutni URL do slike, odn. putanja; alt je opis slike-->
@@ -39,10 +39,13 @@
 
     <main>
 
-        <picture>
-            <source media="(min-width: 104px)" srcset="mt-everest-wallpaper-vertical.jpg">
-            <source media="(min-width: 416px)" srcset="mt-everest-wallpaper-scaled.jpg">
-            <img src="high-mountain.jpeg" alt="ai gneerated pix of a high mountain">
+        <picture class="main-img">
+            <source media="(min-width: 1200px)" srcset="desolate-mountain-square-crop.jpg">
+            <source media="(max-height: 600px)" srcset="desolate-mountain-square-crop.jpg">
+            <source media="(min-width: 981px)" srcset="desolate-mountain-medium-crop.jpg">
+            <source media="(max-height: 600px)" srcset="desolate-mountain-medium-crop.jpg">
+            <source media="(max-width: 849px)" srcset="desolate-mountain-crop-800x200.jpg">
+            <img src="hard-boiled-wide-crop.jpg" alt="AI image wide crop">
         </picture>
 
         <table>
