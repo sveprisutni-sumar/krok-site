@@ -137,13 +137,24 @@ aside {
   text-align: center;
 }
 
+.aside-multimedia {
+  display: flex;
+  flex-direction: column;
+}
+
 aside img {
   max-width: 50%;
 }
 
 strong {
   color: rgb(124, 53, 24);
-}  
+}
+
+.video-content {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
 
  /* Sa ovakvim upitima lepo se prikazuju slike i raspored na stranici za sve uređaje u Chrome DevTools-u osim za iPad Pro u portret orijentaciji */
 
@@ -169,6 +180,11 @@ strong {
   aside img {
     max-width: 25%;
   }
+
+  .aside-multimedia {
+    max-width: 100%;
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 80em) and (orientation: landscape) {
@@ -177,6 +193,13 @@ main {
   flex-direction: row;  
 }
 
+}
+
+@media (orientation: landscape) {
+
+  .main-img-multimedia {
+    display: none;
+  }
 }
 
 /* Kraj upita sa kojima se lepo prikazuju slike i raspored na stranici za sve uređaje u Chrome DevTools-u osim za iPad Pro u portret orijentaciji */
