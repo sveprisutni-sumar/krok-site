@@ -29,10 +29,13 @@ p, input, li {
 }
 
 h1 {
-  font-size: 4rem;
+  flex: 5;
+  margin: 1rem 1rem;
+  font-size: 5rem;
   text-align: center;
   text-decoration: underline;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px rgb(37, 24, 6);
+  text-transform: uppercase;
 }
 
 h2 {
@@ -47,7 +50,7 @@ h3 {
 p, li {
   font-size: 1.6rem;
   line-height: 1.5;
-  font-style:oblique;
+  font-style: oblique;
 }
 
 dl, dt {
@@ -73,15 +76,14 @@ main, header, nav, article, aside, footer, section {
   padding: 1%;
 }
 
-h1 {
-  flex: 5;
-  text-transform: uppercase;
+header img {
+  display: inline-block;
+  height: 7rem;
+  padding: 0.5rem 0;
 }
 
-header img {
-  display: block;
-  height: 60px;
-  padding-top: 20.15px;
+header a {
+  padding: 0rem;
 }
 
 nav {
@@ -171,9 +173,13 @@ strong {
   }
   
   .main-special{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    word-wrap: break-word; /* Ovo je Copilot ispravio "Fixed the incorrect property value", a ovo je bilo moje rešenje i radilo je: text-wrap: pretty; */
-    font-size: 125%;
+    font: 125% / 1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*font je shorthand; u osnovi u jednom redu sam napisao sve ono što je u naredna dva reda zakomentarisano - veličina fonta 125%, 1,5 puta je veća visina reda
+    od veličine fonta a svi ovi nazivi su familije fontova "/" je divajder između dve numeričke vrednosti*/
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-size: 125%; */
+
+    word-wrap: break-word;/* Ovo je Copilot ispravio "Fixed the incorrect property value", a ovo je bilo moje rešenje i radilo je: text-wrap: pretty; */
     max-width: 100%;
   }
 
@@ -182,6 +188,7 @@ strong {
   }
 
   .aside-multimedia {
+    display: inline-block;
     max-width: 100%;
     flex-direction: row;
   }
