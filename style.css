@@ -53,6 +53,10 @@ p, li {
   font-style: oblique;
 }
 
+article {
+  font-size: 1.5rem;
+}
+
 dt {
   color: rgb(124, 53, 24);
 }
@@ -85,7 +89,13 @@ header a {
   padding: 0rem;
 }
 
+header h1 {
+  text-indent: 100px; /*100px praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na sliku kluba*/
+  text-shadow: 2px 2px 5px rgb(37, 24, 6); /*Ispravio Copilot*/
+}
+
 nav {
+  text-shadow: 2px 2px 5px rgb(37, 24, 6);
   height: 50px;
   flex: 100%;
   display: flex;
@@ -139,6 +149,7 @@ aside {
 }
 
 .aside-multimedia {
+  align-items: center;
   display: flex;
   flex-direction: column;
 }
@@ -190,6 +201,7 @@ strong {
     display: inline-block;
     max-width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
 }
