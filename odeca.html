@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>Odeća</title><!--Ovo je naziv stranice i ovo ce biti ispisano u pregledacu-->
         <link href="style.css" rel="stylesheet"/> <!--Ovaj .css sam drmnuo sa neta iz projekta na mnd web docs-a-->
+        <script type="module" src="script.js"> </script> <!--Ovo je JavaScript koji je preuzet sa https://www.geeksforgeeks.org/how-to-add-javascript-in-html/
+        Stavljen je u spoljnu datoteku script.js. Međutim, ovako neće raditi u pregledaču (Chrome) zbog greške CORS, već samo preko lokalnog veb-servera koji je
+        ovde dostupan u VS Code-u putem dodatka Preview on Web Server (prečica na tastaturi Ctrl+Shift+V)-->
     </head>
     <body>
 
@@ -18,8 +21,10 @@
 
             <h1> <b>PLANINARSKA ODEĆA</b> </h1>
 
+            <button class="dark-mode" type="button">Noćni režim</button>
+
             <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u">
-                <img src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
+                <img class="zeleznicar-logotip" src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
             </a>
         <!--src tu se nalazi relativni i apsolutni URL do slike, odn. putanja; alt je opis slike-->
 
@@ -29,8 +34,69 @@
                     <li><a href="obuca.html" title="Planinarska obuća">Obuća</a></li>
                     <li><a href="hrana.html" title="Hrana za planinarenje">Hrana</a></li>
                     <li><a href="kontakt.html" title="Kontakt informacije">Kontakt</a></li>
-                    <li><a href="multimedia.html" title="Dnevnik planinarenja">Dnevnik</a></li>
+                    <li><a href="dnevnik.html" title="Dnevnik planinarenja">Dnevnik</a></li>
                 </ul>
             </nav>
 
         </header>
+
+        <main>
+            <section class="image-special">
+                <a href="jakna-1.jpg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="jakna-1.jpg">
+                        <img src="jakna-1-400x400.jpg" alt="AI planinarska jakna">
+                    </picture>
+                </a> 
+                Ova narandžasta planinarska jakna, prikazana na slici, je odličan izbor za zaštitu od hladnoće i vlage.
+                Kapuljača pruža dodatnu zaštitu glave, a dizajn je funkcionalan i moderan.
+                Jakna je idealna za planinarenje u različitim uslovima.
+            </section>
+
+            <section class="image-special">
+                <a href="jakna-2.jpg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="jakna-2.jpg">
+                        <img src="jakna-2-400x400.jpg" alt="AI planinarska jakna">
+                    </picture>
+                </a> 
+                Planinarska jakna sa kapuljačom, pruža odličnu zaštitu od vetra i kiše. 
+                Moderan dizajn i visokokvalitetni materijali garantuju udobnost i izdržljivost.
+                Idealna za sve vremenske uslove u planini. 
+            </section>
+
+            <section class="image-special">
+                <a href="majica-1.jpg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="majica-1.jpg">
+                        <img src="majica-1-400x400.jpg" alt="AI planinarska majica dugih rukava">
+                    </picture>
+                </a> 
+                Planinarska majica dugih rukava, pruža dodatnu zaštitu od sunca i vetra.
+                Izrađena od materijala koji odvodi vlagu, održavajući telo suvim tokom napornog uspona.
+                Praktična i udobna za sve vrste planinarskih aktivnosti. 
+            </section>
+
+            <section class="image-special">
+                <a href="majica-2.jpg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="majica-2.jpg">
+                        <img src="majica-2-400x400.jpg" alt="AI planinarska majica dugih rukava">
+                    </picture>
+                </a> 
+                Majica kratkih rukava za planinarenje, idealna za toplije dane u planini.
+                Brzo se suši i pruža udobnost tokom aktivnosti.
+                Lagana i prozračna, savršena za slojevito oblačenje.
+            </section>
+
+        </main>
+
+        <a class="weatherwidget-io" href="https://forecast7.com/sr/45d1221d29/vrsac/" data-label_1="Vremenska prognoza za Vršac"
+        data-theme="original" >VRŠAC WEATHER</a>
+
+        <footer>
+            <p class="main-special">
+                <b>PSK Železničar</b>
+                Nikole Tesle 36, 26300 Vršac
+            </p>
+        </footer>

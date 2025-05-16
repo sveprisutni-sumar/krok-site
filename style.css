@@ -71,12 +71,12 @@ header {
 }
 
 body {
-  background-color: rgb(114, 81, 38);
+  background-color: rgb(3, 3, 3);
   padding: 1%;
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(218, 200, 178, 0.5);
+  background-color: rgba(230, 245, 235, 0.432);
   padding: 1%;
 }
 
@@ -91,15 +91,16 @@ header a {
 }
 
 header h1 {
-  text-indent: 100px; /*100px praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na sliku kluba*/
+  text-indent: 16rem; /*16rem praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na logotip i dugme*/
   text-shadow: 2px 2px 5px rgb(37, 24, 6); /*Ispravio Copilot*/
 }
 
 nav {
-  text-shadow: 2px 2px 5px rgb(37, 24, 6);
+  text-shadow: 2px 2px 5px rgb(211, 177, 128);
   height: 50px;
   flex: 100%;
   display: flex;
+  border-radius: 2% /12%;
 }
 
 nav ul {
@@ -123,7 +124,6 @@ nav a, nav span {
   text-transform: uppercase;
   text-decoration:solid;
   color: black;
-
 }
 
 /* || main layout  coppied from https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css but прчен*/
@@ -173,26 +173,44 @@ strong {
   padding: 5px;
 }
 
-.multimedia-text{
+.multimedia-text {
   font-size: 1.35rem;
 }
 
- /* Sa ovakvim upitima lepo se prikazuju slike i raspored na stranici za sve uređaje u Chrome DevTools-u osim za iPad Pro u portret orijentaciji */
+.main-img {
+  display: grid;
+  gap: 20px;
+}
+
+.dark-mode {
+  background-color:#000000 ;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  width: 6rem;
+  margin: 1rem;
+  border-radius: 10% / 50%;
+}
+
+.zeleznicar-logotip {
+  border-radius: 50% / 50%;
+}
 
 @media (max-width: 80em) and (orientation: portrait) {
 
   main {
     flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .special {
     font-size: 125%;
     text-wrap: wrap;
-    text-align: left;
+    text-align: center;
   }
   
   .main-special {
-    font: 125% / 1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font: 205% / 1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /*font je shorthand; u osnovi u jednom redu sam napisao sve ono što je u naredna dva reda zakomentarisano - veličina fonta 125%, 1,5 puta je veća visina reda
     od veličine fonta, a svi ovi nazivi su porodice fontova; "/" je divajder između dve numeričke vrednosti*/
     /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
@@ -205,29 +223,74 @@ strong {
   aside img {
     max-width: 25%;
   }
-
+   /* sa ovim radi kako valja*/ 
   .aside-multimedia {
     display: inline-block;
     max-width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
   }
-}
 
-@media (min-width: 80em) and (orientation: landscape) {
+  .futer {
+    font-size: 2rem;
+  }
 
-main {
-  flex-direction: row;  
-}
+  nav a {
+    font-size: 3rem;
+  }
 
+  tr, td {
+    font-size: 2rem;
+  }
+
+  .dark-mode {
+    font-size: 2rem;
+    width: 16rem;
+  }
+  
 }
 
 @media (orientation: landscape) {
 
+main {
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
+
+.image-special {
+  font-size: 1.75rem;
+  min-width: 400px;
+  max-width: 400px;
+}
+.main-special {
+  font-size: 1.75rem;
+}
+
+tr, td {
+  font-size: 2rem;
+}
+
+.special-section-multimedia {
+  width: 100vw;
+  display: inline-block;
+  align-items: center;
+  text-shadow: 2px 2px 5px rgb(37, 24, 6);
+  max-width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+}
+
+/*Nema potrebe za ovim upitom dole jer sam zakomentarisao klasu main-img-multimedia u dokumentu dnevnik.html*/
+/* @media (orientation: landscape) {
+
   .main-img-multimedia {
     display: none;
   }
-}
+} */
 
 /* Kraj upita sa kojima se lepo prikazuju slike i raspored na stranici za sve uređaje u Chrome DevTools-u osim za iPad Pro u portret orijentaciji */
 
@@ -296,6 +359,11 @@ caption {
 }
 
 a:hover {
+  color: rgb(95, 68, 36);
+  font-stretch: ultra-condensed;
+}
+
+#dark-mode:hover {
   color: rgb(95, 68, 36);
   font-stretch: ultra-condensed;
 }

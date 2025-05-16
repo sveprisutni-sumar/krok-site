@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>Obuća</title><!--Ovo je naziv stranice i ovo ce biti ispisano u pregledacu-->
         <link href="style.css" rel="stylesheet"/> <!--Ovaj .css sam drmnuo sa neta iz projekta na mnd web docs-a-->
+        <script type="module" src="script.js"> </script> <!--Ovo je JavaScript koji je preuzet sa https://www.geeksforgeeks.org/how-to-add-javascript-in-html/
+        Stavljen je u spoljnu datoteku script.js. Međutim, ovako neće raditi u pregledaču (Chrome) zbog greške CORS, već samo preko lokalnog veb-servera koji je
+        ovde dostupan u VS Code-u putem dodatka Preview on Web Server (prečica na tastaturi Ctrl+Shift+V)-->
     </head>
     <body>
 
@@ -18,8 +21,10 @@
 
             <h1> <b>PLANINARSKA OBUĆA</b> </h1>
 
+            <button class="dark-mode" type="button">Noćni režim</button>
+
             <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u">
-                <img src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
+                <img class="zeleznicar-logotip" src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
             </a>
         <!--src tu se nalazi relativni i apsolutni URL do slike, odn. putanja; alt je opis slike-->
 
@@ -29,93 +34,103 @@
                     <li><a href="odeca.html" title="Planinarska odeća">Odeća</a></li>
                     <li><a href="hrana.html" title="Hrana za planinarenje">Hrana</a></li>
                     <li><a href="kontakt.html" title="Kontakt informacije">Kontakt</a></li>
-                    <li><a href="multimedia.html" title="Dnevnik planinarenja">Dnevnik</a></li>
+                    <li><a href="dnevnik.html" title="Dnevnik planinarenja">Dnevnik</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <a href="patika.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
-                <picture class="main-img">
-                    <source media="(min-width: 500px)" srcset="patika.jpeg">
-                    <img src="patika-duboka-400x400.jpeg" alt="AI duboka patika">
-                </picture>
-            </a>
 
-            <section class="multimedia-text"> 
+            <section class="image-special">
+                <a href="patika.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="patika.jpeg">
+                        <img src="patika-duboka-400x400.jpeg" alt="AI duboka patika">
+                    </picture>
+                </a> 
                 Planinarske patike su lagana i izdržljiva obuća koja kombinuje karakteristike planinarskih čizama i trejl patika,
                 pružajući dobru zaštitu, stabilnost i prijanjanje na zahtevnim terenima. Idealne su za brze uspone, tehničke prilaze,
                 penjanje po steni i mešovite terene sa snegom, kamenjem i zemljanim stazama.
             </section>
 
-            <a href="patika2.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
-                <picture class="main-img">
-                    <source media="(min-width: 500px)" srcset="patika2.jpeg">
-                    <img src="patika2-400x400.jpeg" alt="AI plitka patika">
-                </picture>
-            </a>
-
-            <section class="multimedia-text"> 
+            <section class="image-special">
+                <a href="patika2.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="patika2.jpeg">
+                        <img src="patika2-400x400.jpeg" alt="AI plitka patika">
+                    </picture>
+                </a>
                 Plitke planinarske patike su lagana i izdržljiva obuća koja kombinuje stabilnost planinarskih čizama sa fleksibilnošću
                 trail patika, pružajući dobro prijanjanje i zaštitu na zahtevnim terenima. Idealne su za tehničke prilaze, brze uspone i
                 kretanje po steni, zemlji i kamenju.
             </section>
 
-            <a href="cipela2.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
-                <picture class="main-img">
-                    <source media="(min-width: 500px)" srcset="cipela2.jpeg">
-                    <img src="cipela2-400x400.jpeg" alt="AI tehnicka cipela">
-                </picture>
-            </a>
-
-            <section class="multimedia-text"> 
+            <section class="image-special">
+                <a href="cipela2.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="cipela2.jpeg">
+                        <img src="cipela2-400x400.jpeg" alt="AI tehnicka cipela">
+                    </picture>
+                </a> 
                 Visoke tehničke planinarske cipele su čvrsta i izdržljiva obuća koja nudi dodatnu stabilnost i zaštitu, kombinujući
                 karakteristike planinarskih čizama sa naprednim performansama na zahtevnim terenima. Savršene su za tehničke uspone,
                 alpinističke uslove i brzu navigaciju kroz stene, sneg i kamenite staze.
             </section>
 
-            <a href="patika-alpsko.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
-                <picture class="main-img">
-                    <source media="(min-width: 500px)" srcset="patika-alpsko.jpeg">
-                    <img src="patika-alpsko-400x400.jpeg" alt="AI alpska patika">
-                </picture>
-            </a>
-
-            <section class="multimedia-text"> 
+            <section class="image-special"> 
+                <a href="patika-alpsko.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="patika-alpsko.jpeg">
+                        <img src="patika-alpsko-400x400.jpeg" alt="AI alpska patika">
+                    </picture>
+                </a>
                 Planinarske patike su lagana i izdržljiva obuća koja kombinuje karakteristike planinarskih čizama i trejl patika,
                 pružajući dobru zaštitu, stabilnost i prijanjanje na zahtevnim terenima. Idealne su za brze uspone, tehničke prilaze,
                 penjanje po steni i mešovite terene sa snegom, kamenjem i zemljanim stazama.
             </section>
 
-            <a href="tradicionalna-cizma.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
-                <picture class="main-img">
-                    <source media="(min-width: 500px)" srcset="tradicionalna-cizma.jpeg">
-                    <img src="tradicionalna-cizma-400x400.jpeg" alt="AI trad cizma">
-                </picture>
-            </a>
-
-            <section class="multimedia-text"> 
+            <section class="image-special">
+                <a href="tradicionalna-cizma.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="tradicionalna-cizma.jpeg">
+                        <img src="tradicionalna-cizma-400x400.jpeg" alt="AI trad cizma">
+                    </picture>
+                </a> 
                 Plitke planinarske patike su lagana i izdržljiva obuća koja kombinuje stabilnost planinarskih čizama sa fleksibilnošću
                 trail patika, pružajući dobro prijanjanje i zaštitu na zahtevnim terenima. Idealne su za tehničke prilaze, brze uspone i
                 kretanje po steni, zemlji i kamenju.
             </section>
 
-            <a href="tradicionalna-cizma2.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
-                <picture class="main-img">
-                    <source media="(min-width: 500px)" srcset="tradicionalna-cizma2.jpeg">
-                    <img src="tradicionalna-cizma2-400x400.jpeg" alt="AI tradicionalna cipela">
-                </picture>
-            </a>
+            <section class="image-special"> 
+                <a href="tradicionalna-cizma2.jpeg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="tradicionalna-cizma2.jpeg">
+                        <img src="tradicionalna-cizma2-400x400.jpeg" alt="AI tradicionalna cipela">
+                    </picture>
+                </a>
+                Visoke tehničke planinarske cipele su čvrsta i izdržljiva obuća koja nudi dodatnu stabilnost i zaštitu, kombinujući
+                karakteristike planinarskih čizama sa naprednim performansama na zahtevnim terenima. Savršene su za tehničke uspone,
+                alpinističke uslove i brzu navigaciju kroz stene, sneg i kamenite staze.
+            </section>
 
-            <section class="multimedia-text"> 
+            <section class="image-special"> 
+                <a href="la-sportiva-g-tech-expedition-boots.jpg" target="_blank" rel="noopener noreferrer" title="Prikaz slike preko cele stranice u novoj kartici">
+                    <picture class="main-img">
+                        <source media="(min-width: 500px)" srcset="la-sportiva-g-tech-expedition-boots.jpg">
+                        <img src="la-sportiva-g-tech-expedition-boots-400x400.jpg" alt="La sportiva">
+                    </picture>
+                </a>
                 Visoke tehničke planinarske cipele su čvrsta i izdržljiva obuća koja nudi dodatnu stabilnost i zaštitu, kombinujući
                 karakteristike planinarskih čizama sa naprednim performansama na zahtevnim terenima. Savršene su za tehničke uspone,
                 alpinističke uslove i brzu navigaciju kroz stene, sneg i kamenite staze.
             </section>
         </main>
 
-        <footer class="main-special">
-            <p>
+        <a class="weatherwidget-io" href="https://forecast7.com/sr/45d1221d29/vrsac/" data-label_1="Vremenska prognoza za Vršac"
+        data-theme="original" >VRŠAC WEATHER</a>
+
+        <footer>
+            <p class="main-special">
                 <b>PSK Železničar</b>
                 Nikole Tesle 36, 26300 Vršac
             </p>
