@@ -1,0 +1,182 @@
+<!DOCTYPE html> <!--Ovo je neki drevni artefakt iz '92 koji mora da se ukljuci kako bi dokument bio validan'-->
+<html lang="sr-rs">
+    <head><!--Ovaj deo je zaglavlje dokumenta u kome se tura sve ono sto se NE prikazuje na stranici korisniku-->
+        <meta charset="utf-8">
+        <title>Dnevnik</title><!--Ovo je naziv stranice i ovo ce biti ispisano u pregledacu-->
+        <link href="style.css" rel="stylesheet"/> <!--Ovaj .css sam drmnuo sa neta iz projekta na mnd web docs-a-->
+        
+    </head>
+
+    <body>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="C:\WORKWORK\RAD\Engineering\HTML\Projects\01\krok-site\images\favicon.ico" type="image/x-icon"/>
+    <!--Ovo iznad je ikonica koja se vidi u pregledacu koja iz nekog razloga sada ne radi vise. Moguce da je zbog CSS-a. NE! Ne radi zato što je user agent
+        stylesheet link stavljen display: none-->
+
+    <header>
+
+        <h1> <b>Dnevnik planinarenja</b> </h1>
+        
+        <button class="dark-mode" type="button">Noćni režim</button>
+
+        <img class="zeleznicar-logotip" src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
+        <!--src tu se nalazi relativni i apsolutni URL do slike, odn. putanja; alt je opis slike-->
+
+        <nav>
+
+            <ul>
+                <li><a href="index.html" title="Početna stranica">Početna</a></li>
+                <li><a href="obuca.html" title="Planinarska obuća">Obuća</a></li>
+                <li><a href="odeca.html" title="Planinarska odeća">Odeća</a></li>
+                <li><a href="hrana.html" title="Hrana za planinarenje">Hrana</a></li>
+                <li><a href="kontakt.html" title="Kontakt informacije">Kontakt</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- nema potrebe za ovom slikom; bez nje ima više mesta za tabelu -->
+        <!-- <picture class="main-img-multimedia">
+            <source media="(min-width: 1200px)" srcset="desolate-mountain-square-crop.jpg">
+            <source media="(max-height: 600px)" srcset="desolate-mountain-square-crop.jpg">
+            <source media="(min-width: 981px)" srcset="desolate-mountain-medium-crop.jpg">
+            <source media="(max-height: 600px)" srcset="desolate-mountain-medium-crop.jpg">
+            <source media="(max-width: 849px)" srcset="desolate-mountain-crop-800x200.jpg">
+            <img src="hard-boiled-wide-crop.jpg" alt="AI image wide crop">
+        </picture> -->
+
+        <table>
+            <caption>
+                    <h2>Dnevnik planinarenja za 2024.</h2>
+            </caption>
+
+            <colgroup>
+                <!-- <col /> --> <!-- <col /> znači da je prva kolona prazna, odn. bez eksplicitnog dodavanja izgleda --> 
+                <col style="background-color: rgb(124, 124, 78)"> <!-- ako ima ove prazne kolone od gore, onda druga kolona ima boju pozadine maslinasto-zelenu. Jedino što stil iz .css datoteke
+                prepisuje ovaj stil u prvom i trećem redu-->
+            </colgroup>            
+            <!-- <th>&nbsp;</th> -->
+            <!-- 6 kolona ima -->
+            <th>Redni broj</th> 
+            <th>Datum</th>
+            <th>Vrh</th>
+            <th>Planina</th>
+            <th class="column">Visina</th>
+            <th>Detalji</th>
+           
+            <tr>                
+                <td>1</td> <td>Nedelja 18. 2. 2024.</td> <td><em>Veliki Vranj</em></td> <td>Homoljske planine, Srbija</td> <td class="column">884 m</td>
+                <td>Prešli oko 17 km kružnom stazom.</td>
+            </tr>
+
+            <tr>
+                <td>2</td> <td>Subota 25. 5. 2024.</td> <td><em>Velki Povlen, Srednji Povlen, Mali Povlen</em></td> <td>Povlen, Srbija</td> <td class="column">1271 m, 1301 m i 1347 m</td>
+                <td>Prešli 17 km uz ukupno 1000 m uspona.</td>
+            </tr>
+
+            <tr>
+                <td>3</td> <td>Subota 26. 5. 2024.</td> <td><em>Pali</em></td> <td>Magleš, Srbija</td> <td class="column">1036 m</td>
+                <td>Prešli 18 km uz ukupno 810 m uspona.</td>
+            </tr>
+
+            <tr>
+                <td>4</td> <td>Subota 8. 6. 2024.</td> <td><em>Semenik i Gozna</em></td> <td>Nacionalni park Semenic-Cheile Caraşului, Banatske planine, Semenik, Rumunija</td>
+                <td class="column">1445 m i 1447 m</td>
+                <td>Prešli oko 14 km sa ukupno 500 m uspona.</td>
+            </tr>
+
+            <tr>
+                <td>5</td> <td>Subota 15. 6. 2024.</td> <td><em>-</em></td> <td>Nacionalni park Fruška gora, Srbija</td>
+                <td class="column">-</td>
+                <td>Šetali šumom oko 12,5 km bez značajnog uspona.</td>
+            </tr>
+
+        </table>
+
+    </main>
+
+    <section class="special-section-multimedia">
+
+        <h2>
+            Video-zapisi sa planinarenja:
+        </h2>
+
+        <iframe class="video-content" width="350" height="350" src="https://www.youtube.com/embed/BVbeW2lyKaw"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen >
+        </iframe>
+
+        <iframe class="video-content" width="350" height="350" src="https://www.youtube.com/embed/jRUAx4XsLXY"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen >
+        </iframe>
+
+        <iframe class="video-content" width="350" height="350" src="https://www.youtube.com/embed/C8lGKsTUxKI"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen >
+        </iframe>
+
+        <iframe class="video-content" width="350" height="350" src="https://www.youtube.com/embed/g8oXqRmi5fI"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen >
+        </iframe>
+        
+        <!-- Ovo u nastavku ostavljam samo kao primer kako implementirati video-sadržaj na stranicu. -->
+        <!-- <video class="video-content" controls height="350" width="350" loop>
+            <source src="videos\ulazak u pecinu.mp4" type="video/mp4">
+            <p>
+                Ne ide. Video-snimak mozes pogledat <a href="https://drive.google.com/file/d/1MrkfEPyCDs_-mghpJgQyYM_eSt7ylsFw/view?usp=sharing"
+                target="_blank" rel="noopener noreferrer" title="ulazak u pecinu na Homolju"> ovde </a>
+            </p>
+        </video> -->
+        
+
+        
+    </section>
+
+    <!-- U nastavku je vidžet za vreme. Kod je kopiran sa https://weatherwidget.io/ -->
+
+    <a class="weatherwidget-io" href="https://forecast7.com/sr/45d1221d29/vrsac/" data-label_1="Vremenska prognoza za Vršac"
+        data-theme="original" >VRŠAC WEATHER</a>
+
+    <!-- <script>
+        !function(d, s, id) {
+            let js, fjs = d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://weatherwidget.io/js/widget.min.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+    }
+        (document, 'script', 'weatherwidget-io-js');            
+    </script> -->
+
+    <!-- Ovde je završen kod za vidžet. Teg <script> po onlajn literaturi služi za ubacivanje JavaScript koda u HTML (ili barem ja tako shvatam).
+        To se radi radi izvršavanja skripti na klijentskoj strani. Izvor https://www.geeksforgeeks.org/html-script-tag/
+        Ovaj JavaScript kod je zakomentarisan ovde i ne izvršava se kao interni JavaScript kod, već je kopiran u zasebnu datoteku (script.js) i izvršava
+        se tako. Međutim, neće raditi u pregledaču (Chrome) zbog greške CORS, već samo preko lokalnog veb-servera koji je
+        ovde dostupan u VS Code-u putem dodatka Preview on Web Server (prečica na tastaturi Ctrl+Shift+V)-->
+
+    <footer>
+        <p class="futer">
+            <b>PSK Železničar</b>
+            Nikole Tesle 36, 26300 Vršac
+        </p>
+    </footer>
+
+    <script type="module" src="script.js"> </script> <!--Ovo je JavaScript koji je preuzet sa https://www.geeksforgeeks.org/how-to-add-javascript-in-html/
+        Stavljen je u spoljnu datoteku script.js. Međutim, ovako neće raditi u pregledaču (Chrome) zbog greške CORS, već samo preko lokalnog veb-servera koji je
+        ovde dostupan u VS Code-u putem dodatka Preview on Web Server (prečica na tastaturi Ctrl+Shift+V)-->
+
+</body>
+
+</html>

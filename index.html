@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Planinarenje</title><!--Ovo je naziv stranice i ovo ce biti ispisano u pregledacu-->
         <link href="style.css" rel="stylesheet"/> <!--Ovaj .css sam drmnuo sa neta iz projekta na mnd web docs-a-->
+        
     </head>
     <body>
 
@@ -18,8 +19,10 @@
 
             <h1> <b>PLANINARENJE</b> </h1>
 
-            <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u">
-                <img src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
+            <button class="dark-mode" type="button">Noćni režim</button>
+
+            <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u" id="zeleznicar-logotip">
+                <img class="zeleznicar-logotip" src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
             </a>
         <!--src tu se nalazi relativni i apsolutni URL do slike, odn. putanja; alt je opis slike-->
 
@@ -29,7 +32,7 @@
                     <li><a href="odeca.html" title="Planinarska odeća">Odeća</a></li>
                     <li><a href="hrana.html" title="Hrana za planinarenje">Hrana</a></li>
                     <li><a href="kontakt.html" title="Kontakt informacije">Kontakt</a></li>
-                    <li><a href="multimedia.html" title="Dnevnik planinarenja">Dnevnik</a></li>
+                    <li><a href="dnevnik.html" title="Dnevnik planinarenja">Dnevnik</a></li>
                 </ul>
             </nav>
 
@@ -37,9 +40,9 @@
     
         <main>
 
-            <picture class="main-img">
-                <source media="(min-width: 1200px)" srcset="desolate-mountain-square-crop.jpg">
-                <source media="(max-height: 600px)" srcset="desolate-mountain-square-crop.jpg">
+            <picture>
+                <!-- <source media="(min-width: 1200px)" srcset="desolate-mountain-square-crop.jpg">
+                <source media="(max-height: 600px)" srcset="desolate-mountain-square-crop.jpg"> -->
                 <source media="(min-width: 1024px)" srcset="desolate-mountain-medium-crop.jpg">
                 <source media="(max-height: 600px)" srcset="desolate-mountain-medium-crop.jpg">
                 <source media="(max-width: 849px)" srcset="desolate-mountain-crop-800x200.jpg">
@@ -86,7 +89,7 @@
             </section>
             <aside class="main-special">
                 <img src="cipela.jpeg" alt="Ai generated cipela">
-                <p class="main-special">
+                <p class="special">
                     <strong>„Osim blagotvornog delovanja na kardiovaskularni
                     i respiratorni sistem, pokazalo se da povoljno utiče na endokrini i imuni sistem"</strong>, kaže dr Nenad Dikić,
                     predsednik UMSS za BBC na srpskom.
@@ -96,21 +99,31 @@
 
         <!-- U nastavku je vidžet za vreme. Kod je kopiran sa https://weatherwidget.io/ -->
 
-        <a class="weatherwidget-io" href="https://forecast7.com/sr/45d1221d29/vrsac/" data-label_1="Vremenska prognoza za Vršac" data-theme="original" >VRŠAC WEATHER</a>
-            <script>
-                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
-                fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-            </script>
+        <a class="weatherwidget-io" href="https://forecast7.com/sr/45d1221d29/vrsac/" data-label_1="Vremenska prognoza za Vršac"
+        data-theme="original" >VRŠAC WEATHER</a>
+            <!-- <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))
+                    {js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+                    fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script> -->
 
-        <!-- Ovde je završen kod za vidžet. Teg <script> po onlajn literaturi služi za ubacivanje JavaScript koda u HTML (ili barem ja tako shvatam). To se radi radi izvršavanja skripti na
-            klijentskoj strani. Izvor https://www.geeksforgeeks.org/html-script-tag/-->
+        <!-- Ovde je završen kod za vidžet. Teg <script> po onlajn literaturi služi za ubacivanje JavaScript koda u HTML.
+            To se radi radi izvršavanja skripti na klijentskoj strani. Izvor https://www.geeksforgeeks.org/html-script-tag/
+            Ovaj JavaScript kod je zakomentarisan ovde i ne izvršava se kao interni JavaScript kod, već je kopiran u zasebnu datoteku (script.js) i izvršava
+            se tako. Međutim, neće raditi u pregledaču (Chrome) zbog greške CORS, već samo preko lokalnog veb-servera koji je
+            ovde dostupan u VS Code-u putem dodatka Preview on Web Server (prečica na tastaturi Ctrl+Shift+V ili Ctrl+Shift+L)-->
 
-        <footer class="main-special">
-            <p>
-                <b>PSK Železničar</b>
+        <footer>
+            <p class="main-special">
+                <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u">
+                    <b>PSK Železničar</b></a>
                 Nikole Tesle 36, 26300 Vršac
             </p>
         </footer>
-        
+       
+        <script type="module" src="script.js"> </script> <!--Ovo je JavaScript koji je preuzet sa https://www.geeksforgeeks.org/how-to-add-javascript-in-html/
+        Stavljen je u spoljnu datoteku script.js. Međutim, ovako neće raditi u pregledaču (Chrome) zbog greške CORS, već samo preko lokalnog veb-servera koji je
+        ovde dostupan u VS Code-u putem dodatka Preview on Web Server (prečica na tastaturi Ctrl+Shift+V)-->
+
     </body>
 </html>
