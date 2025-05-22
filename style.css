@@ -247,6 +247,11 @@ strong {
     font-size: 2rem;
     width: 16rem;
   }
+
+  .long-title {
+    font-size: 4rem;
+    text-indent: 0;
+  }
   
 }
 
@@ -281,6 +286,10 @@ tr, td {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.long-title {
+    text-indent: 0;
+  }
 
 }
 
