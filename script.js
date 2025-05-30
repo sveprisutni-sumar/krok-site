@@ -14,10 +14,41 @@ document.addEventListener('DOMContentLoaded', initMode);
 dugmeta, a samim tim i prikaza. */
 darkModeButton.addEventListener('click', changeMode);
 
-// TEST KONSTANTE 
-const link = document.querySelector('#index-footer-link');
-console.log(link);
+// TEST
 
+window.addEventListener('resize', prikazSV);
+
+function prikazSV(){
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+}
+
+const i = window.innerWidth;
+if (i < 810) {
+    toggleMenu;
+    console.log("ispunjen prvi uslov");
+}
+const menu = document.querySelector('.site-navigation');
+const menuItems = document.querySelectorAll('.navigation-link');
+const hamburger = document.querySelector('.hamburger-button');
+const menuIcon = document.querySelector('.menuIcon');
+const closeIcon = document.querySelector('.closeIcon');
+
+function toggleMenu() {
+    if (menu.classList.contains('showMenu')) {
+        menu.classList.remove('showMenu');
+        closeIcon.style.display = 'none';
+        menuIcon.style.display = 'block';
+    } else {
+        menu.classList.add('showMenu');
+        closeIcon.style.display = 'block';
+        menuIcon.style.display = 'none';
+    }
+}
+
+hamburger.addEventListener('click', toggleMenu);
+    
+// TEST
 
 // FUNKCIJE ZA DUGME ZA NOĆNI REŽIM (klasa ".dark-mode")
 

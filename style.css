@@ -91,13 +91,13 @@ header a {
 }
 
 header h1 {
-  text-indent: 16rem; /*16rem praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na logotip i dugme*/
+  text-indent: 6rem; /*16rem praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na logotip i dugme*/
   text-shadow: 2px 2px 5px rgb(37, 24, 6); /*Ispravio Copilot*/
 }
 
 nav {
-  text-shadow: 2px 2px 5px rgb(211, 177, 128);
-  height: 50px;
+  text-shadow: 2px 2px 5px rgb(194, 189, 183);
+  height: 32px;
   flex: 100%;
   display: flex;
   border-radius: 2% /12%;
@@ -108,6 +108,7 @@ nav ul {
   list-style-type: none;
   flex: 2;
   display: flex;
+  align-items: center;
 }
 
 nav li {
@@ -124,6 +125,17 @@ nav a, nav span {
   text-transform: uppercase;
   text-decoration:solid;
   color: black;
+}
+
+.hamburger-button {
+  position: fixed;
+  z-index: 100;
+  top: 5rem;
+  left: 2rem;
+  padding: 4px;
+  border: #000000 solid 1px;
+  background: white;
+  cursor: pointer;
 }
 
 /* || main layout  coppied from https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css but прчен*/
@@ -160,6 +172,7 @@ aside {
 }
 
 aside img {
+  padding: 2rem;
   max-width: 50%;
 }
 
@@ -178,6 +191,7 @@ strong {
 }
 
 .main-img {
+  padding: 2rem;
   display: grid;
   gap: 20px;
 }
@@ -197,6 +211,42 @@ strong {
 }
 
 @media (max-width: 80em) and (orientation: portrait) {
+
+  .site-navigation {
+    position: fixed;
+    transform: translateY(-300%);
+    transition: transform 0.4s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #000000;
+    color: white;
+    list-style: none;
+    padding-top: 3.5rem;
+    align-items: center;
+  }
+
+  .navigation-link {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .navigation-link:hover {
+    text-decoration: underline;
+  }
+
+  .showMenu {
+    transform: translateY(30%);
+  }
+
+  .closeIcon {
+    display: none;
+  }
 
   main {
     flex-direction: column;
@@ -245,54 +295,69 @@ strong {
 
   .dark-mode {
     font-size: 2rem;
-    width: 16rem;
+    width: 10rem;
   }
 
   .long-title {
-    font-size: 4rem;
+    font-size: 3.2rem;
     text-indent: 0;
   }
 
   .image-special {
     font-size: 2.75rem;
   }
+
+  .site-navigation-menu {
+    padding: 10rem;
+    padding-top: 9rem;
+  }
   
 }
 
 @media (orientation: landscape) {
 
-main {
-  flex-direction: row;
-  flex-wrap: wrap;  
-}
+  .hamburger-button {
+    display: none;
+  }
 
-.image-special {
-  font-size: 1.75rem;
-  min-width: 400px;
-  max-width: 400px;
-}
-.main-special {
-  font-size: 1.75rem;
-}
+  ul button, ul .header-logo {
+    display: none;
+  }
 
-tr, td {
-  font-size: 2rem;
-}
 
-.special-section-multimedia {
-  width: 100vw;
-  display: inline-block;
-  align-items: center;
-  text-shadow: 2px 2px 5px rgb(37, 24, 6);
-  max-width: 100%;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 
-.long-title {
-    text-indent: 0;
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;  
+  }
+
+  .image-special {
+    font-size: 1.75rem;
+    min-width: 400px;
+    max-width: 400px;
+  }
+  .main-special {
+    font-size: 1.75rem;
+  }
+
+  tr, td {
+    font-size: 2rem;
+  }
+
+  .special-section-multimedia {
+    width: 100vw;
+    display: inline-block;
+    align-items: center;
+    text-shadow: 2px 2px 5px rgb(37, 24, 6);
+    max-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .long-title {
+      text-indent: 0;
   }
 
 }

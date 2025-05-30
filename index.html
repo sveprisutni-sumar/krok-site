@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Planinarenje</title><!--Ovo je naziv stranice i ovo ce biti ispisano u pregledacu-->
         <link href="style.css" rel="stylesheet"/> <!--Ovaj .css sam drmnuo sa neta iz projekta na mnd web docs-a-->
-        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
 
@@ -21,31 +21,36 @@
 
             <button class="dark-mode" type="button">Noćni režim</button>
 
-            <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer" title="Stranica PSK Železničar pri PSS-u" id="zeleznicar-logotip">
+            <a href="https://pss.rs/adresar_klubova/zeleznicar-psk-2/" target="_blank" rel="noopener noreferrer"
+            title="Stranica PSK Železničar pri PSS-u" id="zeleznicar-logotip" class="header-logo">
                 <img class="zeleznicar-logotip" src="ZeleznicarVrsac-300x295.jpg" alt="logotip">
             </a>
         <!--src tu se nalazi relativni i apsolutni URL do slike, odn. putanja; alt je opis slike-->
 
-            <nav> 
-                <ul>
-                    <li><a href="obuca.html" title="Planinarska obuća">Obuća</a></li>
-                    <li><a href="odeca.html" title="Planinarska odeća">Odeća</a></li>
-                    <li><a href="hrana.html" title="Hrana za planinarenje">Hrana</a></li>
-                    <li><a href="kontakt.html" title="Kontakt informacije">Kontakt</a></li>
-                    <li><a href="dnevnik.html" title="Dnevnik planinarenja">Dnevnik</a></li>
-                </ul>
-            </nav>
+
+                <nav class="site-navigation">
+                    <ul class="site-navigation-menu">
+                        <li><a href="obuca.html" title="Planinarska obuća" class="navigation-link">Obuća</a></li>
+                        <li><a href="odeca.html" title="Planinarska odeća" class="navigation-link">Odeća</a></li>
+                        <li><a href="hrana.html" title="Hrana za planinarenje" class="navigation-link">Hrana</a></li>
+                        <li><a href="kontakt.html" title="Kontakt informacije" class="navigation-link">Kontakt</a></li>
+                        <li><a href="dnevnik.html" title="Dnevnik planinarenja" class="navigation-link">Dnevnik</a></li>
+                    </ul>
+                </nav>
+
+                <button class="hamburger-button">
+                    <i class="menuIcon material-icons">menu</i>
+                    <i class="closeIcon material-icons">close</i>
+                </button>
 
         </header>
     
         <main>
 
             <picture>
-                <!-- <source media="(min-width: 1200px)" srcset="desolate-mountain-square-crop.jpg">
-                <source media="(max-height: 600px)" srcset="desolate-mountain-square-crop.jpg"> -->
-                <source media="(min-width: 1024px)" srcset="desolate-mountain-medium-crop.jpg">
+                <source media="(min-width: 1281px)" srcset="desolate-mountain-medium-crop.jpg"> <!-- vrednost je bila 1024px i sa tom vrednošću je radilo i lepo se prikazivalo izuzev iPad Pro-->
                 <source media="(max-height: 600px)" srcset="desolate-mountain-medium-crop.jpg">
-                <source media="(max-width: 849px)" srcset="desolate-mountain-crop-800x200.jpg">
+                <source media="(max-width: 849px)" srcset="desolate-mountain-crop-800x200.jpg">            
                 <img src="hard-boiled-wide-crop.jpg" alt="AI image wide crop">
             </picture>
                        
