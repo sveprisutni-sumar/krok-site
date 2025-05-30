@@ -91,7 +91,7 @@ header a {
 }
 
 header h1 {
-  text-indent: 6rem; /*16rem praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na logotip i dugme*/
+  text-indent: 16rem; /*6rem praznog prostora pre teksta. Tako sam rešio da mi naslov bude na sredini u header-u u odnosu na logotip i dugme*/
   text-shadow: 2px 2px 5px rgb(37, 24, 6); /*Ispravio Copilot*/
 }
 
@@ -212,6 +212,15 @@ strong {
 
 @media (max-width: 80em) and (orientation: portrait) {
 
+  .menuIcon {
+    padding: 0.6rem 4rem;
+  }
+
+  .closeIcon {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .site-navigation {
     position: fixed;
     transform: translateY(-300%);
@@ -224,7 +233,8 @@ strong {
     background: #000000;
     color: white;
     list-style: none;
-    padding-top: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     align-items: center;
   }
 
