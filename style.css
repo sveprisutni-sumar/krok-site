@@ -127,17 +127,6 @@ nav a, nav span {
   color: black;
 }
 
-.hamburger-button {
-  position: fixed;
-  z-index: 100;
-  top: 5rem;
-  left: 2rem;
-  padding: 4px;
-  border: #000000 solid 1px;
-  background: white;
-  cursor: pointer;
-}
-
 /* || main layout  coppied from https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css but прчен*/
 
 main {
@@ -211,6 +200,17 @@ strong {
 }
 
 @media (max-width: 80em) and (orientation: portrait) {
+  
+  .hamburger-button {
+  position: fixed;
+  z-index: 100;
+  top: 5rem;
+  left: 2rem;
+  padding: 4px;
+  border: #000000 solid 1px;
+  background: white;
+  cursor: pointer;
+  }
 
   .menuIcon {
     padding: 0.6rem 4rem;
@@ -329,12 +329,6 @@ strong {
   .hamburger-button {
     display: none;
   }
-
-  ul button, ul .header-logo {
-    display: none;
-  }
-
-
 
   main {
     flex-direction: row;

@@ -23,11 +23,6 @@ function prikazSV(){
     console.log(window.innerWidth);
 }
 
-const i = window.innerWidth;
-if (i < 810) {
-    toggleMenu;
-    console.log("ispunjen prvi uslov");
-}
 const menu = document.querySelector('.site-navigation');
 const menuItems = document.querySelectorAll('.navigation-link');
 const hamburger = document.querySelector('.hamburger-button');
@@ -47,6 +42,8 @@ function toggleMenu() {
 }
 
 hamburger.addEventListener('click', toggleMenu);
+
+
     
 // TEST
 
@@ -71,6 +68,11 @@ function applyDay() {
 
 // Funkcija kojom se postavlja početno stanje (inicijalizuje) dugmeta, odn. prikaza. Ovo je i obrađivač događaja 'DOMContentLoaded'.
 function initMode(){
+    closeIcon.style.display = 'none'; //OVO JE NOVO UBAČENO I NIJE KOMENTARISANO!!!
+    // DEBUG
+    console.log(`Početno stanje za "closeIcon.style.display" kada se učita DOM: ${closeIcon.style.display}`);
+    // DEBUG
+
     const state = localStorage.getItem('darkModeButtonState'); // Preuzimanje stanja sa "localStorage"-a.
     // DEBUG
     console.log(`Početno stanje za funk. "initMode()" kada se učita DOM: ${state}`);
